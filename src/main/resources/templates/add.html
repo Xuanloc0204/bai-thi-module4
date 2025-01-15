@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Thêm mới khuyến mãi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Thêm mới khuyến mãi</h1>
-<form id="addPromotionForm">
-    <label for="title">Tiêu đề:</label><br>
-    <input type="text" id="title" name="title" required><br><br>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Thêm mới khuyến mãi</h1>
+    <div class="card shadow-lg p-4">
+        <form id="addPromotionForm">
+            <div class="mb-3">
+                <label for="title" class="form-label">Tiêu đề:</label>
+                <input type="text" id="title" name="title" class="form-control" required>
+            </div>
 
-    <label for="startDate">Thời gian bắt đầu:</label><br>
-    <input type="date" id="startDate" name="startDate" required><br><br>
+            <div class="mb-3">
+                <label for="startDate" class="form-label">Thời gian bắt đầu:</label>
+                <input type="datetime-local" id="startDate" name="startDate" class="form-control" required>
+            </div>
 
-    <label for="endDate">Thời gian kết thúc:</label><br>
-    <input type="date" id="endDate" name="endDate" required><br><br>
+            <div class="mb-3">
+                <label for="endDate" class="form-label">Thời gian kết thúc:</label>
+                <input type="datetime-local" id="endDate" name="endDate" class="form-control" required>
+            </div>
 
-    <label for="discount">Mức giảm giá:</label><br>
-    <input type="number" id="discount" name="discount" required><br><br>
+            <div class="mb-3">
+                <label for="discount" class="form-label">Mức giảm giá:</label>
+                <input type="number" id="discount" name="discount" class="form-control" required>
+            </div>
 
-    <label for="details">Chi tiết:</label><br>
-    <textarea id="details" name="details" rows="4" cols="50" required></textarea><br><br>
+            <div class="mb-3">
+                <label for="details" class="form-label">Chi tiết:</label>
+                <textarea id="details" name="details" class="form-control" rows="4" required></textarea>
+            </div>
 
-    <button type="button" onclick="addPromotion()">Thêm mới</button>
-    <button type="button" onclick="window.location.href='index.html'">Quay lại</button>
-</form>
+            <div class="d-flex justify-content-between">
+                <button type="button" onclick="addPromotion()" class="btn btn-success">Thêm Mới</button>
+                <button type="button" onclick="window.location.href='index.html'" class="btn btn-secondary">Quay lại</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Bootstrap JS & jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script> src="add.js"</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="add.js"></script>
 </body>
 </html>
